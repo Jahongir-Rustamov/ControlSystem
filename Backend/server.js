@@ -9,18 +9,29 @@ import getStatistics from "./routes/getStatistics.js";
 import Students from "./routes/StudentRoute.js";
 import Grades from "./routes/GradesRoute.js";
 import cors from "cors";
+import path from "path";
 
 const app = express();
 config();
 
 // CORS sozlamalari
-app.use(
-  cors({
-    origin: "http://localhost:5173", // Frontend URL
-    credentials: true,
-  })
-);
+const corsOptions = {
+  origin:
+    process.env.Node_Env === "production"
+      ? process.env.FRONTEND_URL // production uchun
+      : "http://localhost:5173", // development uchun
+  credentials: true,
+};
 
+if (process.env.Node_Env === "production") {
+  app.use(express.static(path.join(__dirname, "/Frontend/dist")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "Frontend", "dist", "index.html"));
+  });
+}
+app.use(cors(corsOptions));
+const __dirname = path.resolve();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
