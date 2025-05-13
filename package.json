@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node Backend/server.js",
     "dev": "nodemon Backend/server.js",
-    "build": "npm install && npm install --prefix Frontend && npm run build --prefix Frontend"
+    "build": "npm install && npm install --prefix Frontend && vite build --outDir ../public --config Frontend/vite.config.js"
   },
   "keywords": [
     "control_platfroms",
