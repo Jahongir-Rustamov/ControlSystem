@@ -364,7 +364,7 @@ const HomePage = () => {
       <aside className="w-64 bg-[#23272e] text-white flex flex-col">
         <div className="flex flex-col items-center py-8">
           <img
-            src="https://randomuser.me/api/portraits/men/32.jpg"
+            src="https://media.istockphoto.com/id/1131164548/vector/avatar-5.jpg?s=612x612&w=0&k=20&c=CK49ShLJwDxE4kiroCR42kimTuuhvuo2FH5y_6aSgEo="
             alt="User"
             className="w-16 h-16 rounded-full border-2 border-white"
           />
@@ -432,7 +432,7 @@ const HomePage = () => {
           <div className="flex items-center gap-3">
             <img src="/vite.svg" alt="Logo" className="w-10 h-10" />
             <span className="font-bold text-xl text-[#23272e]">
-              Control System
+              Boshqaruv tizimi
             </span>
           </div>
 
@@ -461,7 +461,7 @@ const HomePage = () => {
                 onClick={() => setShowDropdown(!showDropdown)}
               >
                 <img
-                  src="https://randomuser.me/api/portraits/men/32.jpg"
+                  src="https://media.istockphoto.com/id/1131164548/vector/avatar-5.jpg?s=612x612&w=0&k=20&c=CK49ShLJwDxE4kiroCR42kimTuuhvuo2FH5y_6aSgEo="
                   alt="User"
                   className="w-10 h-10 rounded-full border-2 border-gray-200"
                 />
