@@ -15,7 +15,7 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: "public", // Build natijasini 'public' papkasiga saqlash
+    outDir: "dist", // Build natijasini 'public' papkasiga saqlash
   },
-  publicDir: "static",
+  publicDir: "public",
 });
